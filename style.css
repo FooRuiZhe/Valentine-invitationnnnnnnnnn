@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 16px;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ffd6e8; /* soft pink base */
+
+  /* Create repeating pattern with emojis using CSS background */
+  background-image: 
+    radial-gradient(circle at 10% 20%, transparent 15%, rgba(255,255,255,0.2) 16%), 
+    radial-gradient(circle at 40% 40%, transparent 15%, rgba(255,255,255,0.2) 16%), 
+    radial-gradient(circle at 70% 70%, transparent 15%, rgba(255,255,255,0.2) 16%), 
+    
+    /* Use emojis as content in generated elements */
+    linear-gradient(45deg, transparent 45%, #ff4d88 46%, #ff4d88 54%, transparent 55%),
+    linear-gradient(-45deg, transparent 45%, #ff4d88 46%, #ff4d88 54%, transparent 55%);
+  
+  background-size: 100px 100px;
+  background-repeat: repeat;
+}
+.container {
+  width: 100%;
+  max-width: 360px;
+
+  background: white;
+  border-radius: 24px;
+  padding: 18px;
+
+  text-align: center;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+}
+
+h1 {
+  font-size: 1.4rem;
+  margin: 16px 0;
+  color: #ff3b7d;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.details {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+button {
+  flex: 1;
+  padding: 14px;
+  font-size: 16px;
+
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+
+  touch-action: manipulation;
+}
+
+#yesBtn {
+  background: #ff4d88;
+  color: white;
+}
+
+#noBtn {
+  background: #e0e0e0;
+}
+
+/* Slightly bigger on desktop */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+
+
